@@ -1,0 +1,837 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+body{
+	background-color: #000;
+}
+
+/*Inicia el codigo de la pantalla de carga*/
+
+.Div-pantalla-carga{
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+}
+
+.Div-pantalla-carga__logo{
+	display: flex;
+	justify-content: center;
+	top: 17%;
+	width: 100%;
+	position: absolute;
+}
+
+.Div-pantalla-carga__logo img{
+	width: 20em;
+	height: 20em;
+	animation-name: charge;
+	animation-duration: 5s;
+}
+
+@keyframes charge{
+	0% {height: 0px; width: 0px;}
+	50% {transform: rotate(360deg);}
+	80% {height: 20em; width: 20em;}
+	100% {height: 0px; width: 0px;}
+}
+
+/*Finaliza el codigo de la pantalla de carga*/
+
+/*Inicia el codigo de la pantalla de tipo de usuario*/
+.Div-login{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.contenedor-botones-usuario img{
+	height: 6em;
+	height: 6em;
+}
+
+.contenedor-botones-usuario a{
+	padding-bottom: 1em;
+
+}
+
+.contenedor-botones-usuario{
+	top: 4%;
+	background-color: slateblue;
+	border-radius: 2em;
+	position: absolute;
+	margin-top: 6em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 12px;
+	width: 17.2em;
+	height: 20em;
+}
+
+.contenedor-botones-usuario button{
+	text-decoration: none;
+	background-color: #44A59B;
+	color: white;
+	border-radius: 10px;
+	border: solid black;
+	font-size: 20px;
+	padding: 14px;
+	margin-top: 30%;
+	border-width: 2px;
+}
+
+.contenedor-botones-usuario button::placeholder{
+	color: #FFF5;
+}
+
+.contenedor-botones-usuario button:hover{
+	background-color: #005950;
+	transform: scale(1.1);
+}
+
+/*Finaliza el codigo de la pantalla de tipo de usuario*/
+
+/*Inicia el codigo de la pantalla de registro*/
+
+.contenedor_formulario{
+	width: 17.2em;
+	height: 20em;
+	background-color: slateblue;
+	border-radius: 2em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 20%;
+}
+
+.contenedor_formulario img{
+	position: absolute;
+	margin: auto;
+	height: 6em;
+	height: 6em;
+}
+
+.contenedor_formulario a{
+	padding-top: 2em;
+}
+
+.contenedor_formulario form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 7em;
+}
+
+.contenedor_formulario form input{
+	display: block;
+	margin: 10px;
+	width: 13em;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: black;
+	background-color: transparent;
+	outline: none;
+}
+
+.contenedor_formulario button{
+	text-decoration: none;
+	background-color: #44A59B;
+	color: white;
+	border-radius: 10px;
+	border: solid black;
+	font-size: 20px;
+	padding: 5px;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	border-width: 2px;
+
+}
+.contenedor_formulario button::placeholder{
+	color: #FFF5;
+}
+.contenedor_formulario button:hover{
+	background-color: #005950;
+	transform: scale(1.1);
+}
+
+/*Finaliza el codigo de la pantalla de registro*/
+
+/*Inicia el codigo de la pantalla de crear cuenta*/
+.contenedor_formulario__crearcuenta{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2em;
+	width: 17.2em;
+	height: 29em;
+	background-color: slateblue;
+	border-radius: 2em;
+}
+
+.contenedor_formulario__crearcuenta form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 10px;
+}
+
+.contenedor_formulario__crearcuenta form input{
+	display: block;
+	margin: 14px;
+	width: 15em;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: black;
+	background-color: transparent;
+	outline: none;
+	color: dark;
+}
+
+.contenedor_formulario__crearcuenta img{
+	margin-left: 15px;
+}
+
+.contenedor_formulario__crearcuenta h1{
+	padding-top: 0.5em;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor_formulario__crearcuenta button{
+	text-decoration: none;
+	background-color: #44A59B;
+	color: white;
+	border-radius: 10px;
+	border: solid black;
+	font-size: 20px;
+	padding: 14px;
+	width: 7em;
+	margin-top: 30%;
+	border-width: 2px;
+}
+
+.contenedor_formulario__crearcuenta button::placeholder{
+	color: #FFF5;
+}
+
+.contenedor_formulario__crearcuenta button:hover{
+	background-color: #005950;
+	transform: scale(1.1);
+}
+
+.boton_regresar{
+	top: 5em;
+	position: absolute;
+}
+
+.boton_regresar i{
+	padding-left: 3em;
+	font-size: 1.7em;
+}
+
+/*Finaliza el codigo de la pantalla de crear cuenta*/
+
+/*Inicia el codigo de la pantalla del menu principal del usuario*/
+
+.Div-menu-principalUsuario{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.barra-busqueda{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input.src{
+	padding:  9px 10px 9px 32px;
+	outline: none;
+	font-size: 18px;
+	border-radius: 15px;
+	color: #444;
+	border: 3px solid #a50559;
+	width: 70px;
+	transition: all 0.5s;
+}
+
+i{
+	background-color: none;
+	color: #000;
+	position: absolute;
+	left: 10px;
+	top: 15px;
+}
+
+.barra-busqueda:hover > input{
+	width: 250px;
+	background-color: #fff;
+	border-color:  #8c10b3;
+	box-shadow: 0 0 5px #6dcff680;
+}
+
+.contenedor-pasarela{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 70%;
+	height: 26em;
+	top: 15%;
+	background-color: slateblue;
+	border-radius: 2em;
+}
+
+.contenedor-titulo{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 25%;
+	padding-left: 10%;
+}
+
+.contenedor-titulo img{
+	width: 5em;
+	height: 5em;
+	padding-right: 7%;
+}
+
+.contenedor-titulo h2{
+	font-size: 1.7em;
+}
+
+.Div-pasarela-libros{
+	position: absolute;
+	width: 80%;
+	height: 17em;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	top: 23%;
+	background-color: #000;
+	border-radius: 2em;
+}
+
+.contenedor-nombre-libreria{
+	display: flex;
+	align-items: center;
+	padding-left: 5%;
+}
+
+.contenedor-nombre-libreria img{
+	width: 9em;
+	height: 9em;
+}
+
+.contenedor-nombre-libreria h2{
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.div-imagenes-libros{
+	width: 100%;
+	padding-top: 3%;
+}
+
+.div-imagenes-libros img{
+	width: 35%;
+	height: 35%;
+	padding-left: 6%;
+	padding-top: 2%;
+}
+
+.contenedor-flecha__continuar-menu i{
+	color: #fff;
+	background-color: none;
+	position: absolute;
+	font-size: 170%;
+	display: flex;
+	justify-content: center;
+}
+
+#flecha-right{
+	top: 76%;
+	left: 80%;
+}
+
+#boton-menu{
+	top: 80%;
+	left: 3%;
+}
+
+@media screen and (max-width:970px){
+    .contenedor-titulo h2{
+    	font-size: 1.2em;
+    }
+
+    .Div-pasarela-libros{
+    	flex-direction: column;
+    	top: 30%;
+    }
+
+    .contenedor-nombre-libreria{
+    	padding-top: 6%;
+    	justify-content: center;
+    }
+
+    .contenedor-nombre-libreria img{
+    	width: 4em;
+    	height: 4em;
+    }
+
+    .contenedor-nombre-libreria h2{
+    	font-size: 1em;
+    }
+
+    .div-imagenes-libros{
+    	width: 80%;
+    	height: 80%;
+    }
+
+    .div-imagenes-libros img{
+		width: 38%;
+		height: 38%;
+		padding-left: 6%;
+	}
+
+	#flecha-right{
+		top: 80%;
+		left: 75%;
+	}
+
+	#boton-menu{
+		top: 93%;
+		left: 5%;
+	}
+}
+
+/*Finaliza el codigo de la pantalla del menu principal del usuario*/
+
+/*Inicia el codigo de la pantalla de libros favoritos y tematicas*/
+
+.contenedor__tematicas-favoritos{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	top: 14%;
+}
+
+.contenedor__tematicas-favoritos h1{
+	font-size: 1.9em;
+	text-align: center;
+}
+
+.contenedor__favoritos{
+	width: 30%;
+	background-color: slateblue;
+	border-radius: 2em;
+}
+
+.contenedor__favoritos img{
+	width: 5em;
+	width: 5em;
+	padding: 0.5em;
+	border: 4px solid darkslateblue;
+}
+
+.contenedor__libros-favoritos{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.contenedor-flechas{
+	width: 100%;
+	bottom: 6.5em;
+	position: relative;
+}
+
+.contenedor-flechas i{
+	font-size: 2em;
+}
+
+.contenedor-flecha__izquierda i{
+	left: 7%;
+}
+
+.contenedor-flecha__derecha i{
+	left: 83%;
+}
+
+.contenedor-boton__regresar{
+	position: relative;
+	width: 100%;
+	bottom: 13em;
+	left: 19em;
+}
+
+.contenedor-boton__regresar i{
+	font-size: 1.4em;
+}
+
+.contenedor_campo-tematicas{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 50%;
+}
+
+.contenedor_campo-tematicas h1{
+	text-align: center;
+}
+
+.contenedor__tematicas{
+	background-color: slateblue;
+	border-radius: 2em;
+	height: 80%;
+}
+
+.contenedor__libros-tematicas{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 1%;
+}
+
+.contenedor__libros-tematicas img{
+	width: 7em;
+	height: 7em;
+	object-fit: fill;
+	padding: 0.5em;
+	border: 3px solid #fff;
+}
+
+@media screen and (max-width:1200px){
+	
+	.contenedor__favoritos{
+		width: 17em;
+	}
+
+	.contenedor_campo-tematicas{
+		width: 17em;
+		margin-top: 0.4em;
+	}
+
+	.contenedor__tematicas{
+		height: 13em;
+	}
+
+	.contenedor__tematicas img{
+		width: 5em;
+		height: 5em;
+	}
+	.contenedor-flecha__izquierda i{
+		left: -1%;
+	}
+
+	.contenedor-flecha__derecha i{
+		left: 90%;
+	}
+
+	.contenedor-boton__regresar{
+		left: 14em;
+	}
+}
+/*Finaliza el codigo de la pantalla de libros favoritos y tematicas*/
+
+/*Inicia el codigo de la pantalla de resultados de busqueda*/
+
+.contenedor-libros__resultados{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 1em;
+}
+
+.contenedor-libros__resultados img{
+	width: 5em;
+	height: 5em;
+	object-fit: fill;
+	padding: 1em;
+	border: 3px solid #fff;
+}
+
+.div-flecha__continuar-menu{
+	position: relative;
+	top: 7%;
+	right: 96%;
+}
+
+.div-flecha__continuar-menu i{
+	font-size: 1.5em;
+	color: #fff;
+}
+
+@media screen and (max-width: 858px){
+
+	.div-flecha__continuar-menu {
+		top: 6%;
+		right: 96%;
+	}
+
+	.contenedor-libros__resultados img{
+		width: 20%;
+		height: 20%;
+	}
+}
+
+/*Finaliza el codigo de la pantalla de resultados de busqueda*/
+
+/*Inicia el codigo de la pantalla de compra del libro*/
+
+.contenedor-valor-nombre__libro{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 70%;
+	height: 27em;
+	top: 9%;
+	background-color: slateblue;
+	border-radius: 2em;
+}
+
+.contenedor_valor__libro{
+	width: 40%;
+}
+
+.contenedor-imagen__libro{
+	margin-top: 1em;
+	display: flex;
+	justify-content: start;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contenedor-imagen__libro img{
+	width: 60%;
+}
+
+.contenedor-nombre_libro__pedir{
+	text-align: center;
+}
+
+.contenedor-nombre_libro__pedir h2{
+	margin-top: 0.5em;
+}
+
+.contenedor-nombre_libro__pedir button{
+	margin-top: 0.5em;
+	text-decoration: none;
+	background-color: #44A59B;
+	color: white;
+	border-radius: 10px;
+	border: solid black;
+	font-size: 20px;
+	padding: 17px;
+	border-width: 2px;
+}
+
+.contenedor-nombre_libro__pedir button::placeholder{
+	color: #FFF5;
+}
+
+.contenedor-nombre_libro__pedir button:hover{
+	background-color: #005950;
+	transform: scale(1.1);
+}
+
+.contenedor_descripcion__libro{
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.valor-libro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+.valor-libro h1{
+	margin: auto;	
+	font-size: 2em;
+}
+
+.valor-libro img{
+	width: 35%;
+}
+
+.descripcion-libro p{
+	font-size: 1em;
+}
+
+.contenedor-boton_regresar i{
+	font-size: 1.7em;
+	margin-top: 2.5em;
+	left: 75%;
+}
+
+@media screen and (max-width: 792px){
+	.contenedor-valor-nombre__libro{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contenedor_descripcion__libro{
+		width: 90%;
+	}
+	
+	.descripcion-libro p{
+		font-size: 60%;
+	}
+
+	.valor-libro{
+		padding-top: 1%;
+	}
+
+	.valor-libro h1{
+		font-size: 1.2em;
+		margin: 0;
+	}
+
+	.valor-libro img{
+		width: 16%;
+	}
+
+}
+
+/*Finaliza el codigo de la pantalla de compra del libro*/
+
+/*Inicia el codigo de la pantalla de metodo de pago del libro*/
+
+.contenedor_metodo__pago{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 2em;
+	width: 17.2em;
+	height: 29em;
+	background-color: slateblue;
+	border-radius: 2em;
+}
+
+.contenedor_metodo__pago form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contenedor_metodo__pago form input{
+	display: block;
+	margin: 14px;
+	width: 15em;
+	border-top-color: transparent;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: black;
+	background-color: transparent;
+	outline: none;
+	color: dark;
+}
+
+.contenedor_metodo__pago img{
+	width: 10em;
+	height: 10em;
+}
+
+.contenedor_metodo__pago button{
+	text-decoration: none;
+	background-color: #44A59B;
+	color: white;
+	border-radius: 10px;
+	border: solid black;
+	font-size: 20px;
+	padding: 14px;
+	width: 7em;
+	margin-top: 20%;
+	border-width: 2px;
+}
+
+.contenedor_metodo__pago button::placeholder{
+	color: #FFF5;
+}
+
+.contenedor_metodo__pago button:hover{
+	background-color: #005950;
+	transform: scale(1.1);
+}
+
+.seleccion-formaPago button{
+	margin-top: 7px;
+	width: 10em;
+	background-color: darkslateblue;
+	padding: 11px;
+}
+
+.seleccion-formaPago button:hover{
+	background-color: slateblue;
+}
+
+/*Finaliza el codigo de la pantalla de metodo de pago del libro*/
+/*Inicia código tema de terror 2/08/2021-Cristhopher*/
+.contenedor-temas{
+	background-image: url(img/fondo1.png);
+	margin:auto;
+	width: 90%;
+	height: 650px;
+}
+.contenedor-temas header{
+	width: 100%;
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 2px;
+	background-color: slateblue;
+	box-shadow: 2px 2px 5px black;
+}
+.contenedor-temas header img{
+	float: right;
+	display: inline-block;
+	transform: rotate(180deg);
+}
+.titulo-tema{
+	color: black;
+	font-size: 40px;
+	display: inline-block;
+}
+.contenedor-libros-temas img{
+		width: 10%;
+		height: 10%;
+		margin: 1em;
+		border: solid white 5px;
+}
+.contenedor-libros-temas img:hover{
+	transform: scale(1.1);
+}
+.flecha_atras{
+	margin: 5px;
+}
+/*fin del codigo de las interfaces de los temas*/
