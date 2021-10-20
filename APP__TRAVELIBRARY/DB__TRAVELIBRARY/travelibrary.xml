@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.1.1
+- https://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1
+- Tiempo de generación: 09-10-2021 a las 15:43:22
+- Versión del servidor: 10.4.20-MariaDB
+- Versión de PHP: 8.0.9
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="travelibrary" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cuentadomiciliario">
+                CREATE TABLE `cuentadomiciliario` (
+                  `USUARIO` varchar(28) NOT NULL,
+                  `CLAVE` varchar(10) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="cuentausuario">
+                CREATE TABLE `cuentausuario` (
+                  `USUARIO` varchar(28) NOT NULL,
+                  `CLAVE` varchar(10) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="datos_compra">
+                CREATE TABLE `datos_compra` (
+                  `nombre` text NOT NULL,
+                  `libro` varchar(30) NOT NULL,
+                  `precio` varchar(50) NOT NULL,
+                  `direccion` varchar(50) NOT NULL,
+                  `metodo` text DEFAULT NULL,
+                  `fecha` text DEFAULT NULL,
+                  `NumPedido` int(100) NOT NULL AUTO_INCREMENT,
+                  `EstadoPedido` varchar(20) NOT NULL,
+                  `USUARIO` varchar(28) NOT NULL,
+                  `NumTelefono` varchar(100) NOT NULL,
+                  PRIMARY KEY (`NumPedido`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="pedidos_domiciliario">
+                CREATE TABLE `pedidos_domiciliario` (
+                  `DOMICILIARIO` varchar(100) NOT NULL,
+                  `ULTIMOPEDIDO` int(100) NOT NULL,
+                  `CANTPEDIDOS` int(100) NOT NULL DEFAULT 0
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="resultados">
+                CREATE TABLE `resultados` (
+                  `nombre` varchar(50) NOT NULL,
+                  `autor` varchar(50) NOT NULL,
+                  `img` varchar(50) NOT NULL,
+                  `tema` text DEFAULT NULL,
+                  `precio` text DEFAULT NULL,
+                  `descripcion` varchar(1000) NOT NULL
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'travelibrary'
+    -->
+    <database name="travelibrary">
+        <!-- Tabla cuentadomiciliario -->
+        <table name="cuentadomiciliario">
+            <column name="USUARIO">dom1</column>
+            <column name="CLAVE">dom1</column>
+        </table>
+        <table name="cuentadomiciliario">
+            <column name="USUARIO">dom2</column>
+            <column name="CLAVE">dom2</column>
+        </table>
+        <!-- Tabla cuentausuario -->
+        <table name="cuentausuario">
+            <column name="USUARIO">Alejandro</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">faz</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">pepe</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO"></column>
+            <column name="CLAVE"></column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">alejo</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">alex</column>
+            <column name="CLAVE"></column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">sandra patricia</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">Alejoelpro</column>
+            <column name="CLAVE">Alejoelpro</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">Alejito</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">fabio</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">elchamo</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <table name="cuentausuario">
+            <column name="USUARIO">SANDRA OCAMPO</column>
+            <column name="CLAVE">1234</column>
+        </table>
+        <!-- Tabla datos_compra -->
+        <!-- Tabla pedidos_domiciliario -->
+        <table name="pedidos_domiciliario">
+            <column name="DOMICILIARIO">dom1</column>
+            <column name="ULTIMOPEDIDO">0</column>
+            <column name="CANTPEDIDOS">0</column>
+        </table>
+        <table name="pedidos_domiciliario">
+            <column name="DOMICILIARIO">dom2</column>
+            <column name="ULTIMOPEDIDO">0</column>
+            <column name="CANTPEDIDOS">0</column>
+        </table>
+        <!-- Tabla resultados -->
+        <table name="resultados">
+            <column name="nombre">mil años de soledad</column>
+            <column name="autor">Gabriel Garcia Marquez</column>
+            <column name="img">img/soledad.jpg</column>
+            <column name="tema">drama</column>
+            <column name="precio">30000</column>
+            <column name="descripcion">El libro narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.
+
+José Arcadio Buendía y Úrsula Iguarán son un matrimonio de primos que se casaron llenos de presagios y temores por su parentesco y el mito existente en la región de que su descendencia podía tener cola de cerdo. En una pelea de gallos en la que resultó muerto el animal de Prudencio Aguilar, éste, enardecido por la derrota, le gritó a José Arcadio Buendía, dueño del vencedor: &quot;A ver si ese gallo le hace el favor a tu mujer&quot;, ya que la gente del pueblo sospechaba que José Arcadio y Úrsula no habían tenido relaciones en un año de matrimonio (por el miedo de Úrsula de que la descendencia naciera con cola de cerdo). Así fue como José Arcadio Buendía reta en duelo a Prudencio, en el que, José Arcadio lo mata al atravesarle la garganta con una lanza. Sin embargo, su fantasma lo atormenta apareciéndose repetidas veces en su casa lavándose la herida mortal con un tapón de espar</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">sangre de campeon</column>
+            <column name="autor">Carlos Cuauhtémoc Sánchez</column>
+            <column name="img">img/sangre_campeon.jpg</column>
+            <column name="tema">drama</column>
+            <column name="precio">30000</column>
+            <column name="descripcion">Sangre de campeón es una novela juvenil escrita por el Mexicano Carlos Cuauhtémoc Sánchez. La obra reúne muchos valores que la sociedad ha perdido con el paso del tiempo e indica que todos somos ganadores, aunque las cosas a veces no nos salgan como queremos.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">La historia secreta del mundo</column>
+            <column name="autor">Jonathan Black</column>
+            <column name="img">img/secreta.jpg</column>
+            <column name="tema">historia</column>
+            <column name="precio">20000</column>
+            <column name="descripcion">Jonathan Black ofrece una guía de las enseñanzas de las antiguas escuelas mistéricas, conservadas a lo largo de los siglos gracias a sociedades secretas. Este conocimiento, propone una versión alternativa de la historia de la humanidad que contesta preguntas a las que la ciencia no consigue dar respuesta.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">El silencio de nuestras palabras</column>
+            <column name="autor">Simona Sparaco</column>
+            <column name="img">img/silencio.jpg</column>
+            <column name="tema">drama</column>
+            <column name="precio">30000</column>
+            <column name="descripcion">En uno de los pisos Alice se duerme mientras espera que Matthias, su nuevo amor del que todavía no se ha decidido a hablar a su madre, regrese. Bastien, el hijo de otra de las vecinas, lleva meses tratando de revelarle algo que podría romperle el corazón, pero no encuentra el coraje para hacerlo</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Coraline</column>
+            <column name="autor">Neil Gaiman</column>
+            <column name="img">img/coraline.jpg</column>
+            <column name="tema">terror</column>
+            <column name="precio">50000</column>
+            <column name="descripcion">Coraline Jones: es la protagonista de la película; es una niña rígida, fuerte de carácter y clara al hablar. Tiene 11 años de edad. Se muda a una casa compartida por otras personas llamada &quot;El Palacio Rosa&quot;, junto a sus padres.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Cuentos Macabros</column>
+            <column name="autor">Edgar Allan Poe</column>
+            <column name="img">img/cuentos.jpg</column>
+            <column name="tema">terror</column>
+            <column name="precio">50000</column>
+            <column name="descripcion">Sinopsis de CUENTOS MACABROS. Ocho cuentos de historias macabras, tétricas y que dejan con un poquito de mal cuerpo. La muerte y lo sobrenatural son sus principales protagonistas. Nos encontraremos con personajes cercanos a la locura que nos cuentan sus historias llenas de remordimientos y de culpas.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">It</column>
+            <column name="autor">Stephen King</column>
+            <column name="img">img/it.jpg</column>
+            <column name="tema">terror</column>
+            <column name="precio">50000</column>
+            <column name="descripcion">es una novela de terror publicada en 1986 por el escritor estadounidense Stephen King. Cuenta la historia de un grupo de siete niños que son aterrorizados por un malvado monstruo -al que llaman «Eso»- que es capaz de cambiar de forma, alimentándose del terror que produce en sus víctimas.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Historia de la ciencia</column>
+            <column name="autor">John Gribbin</column>
+            <column name="img">img/historia_ciencia.jpg</column>
+            <column name="tema">ciencia</column>
+            <column name="precio">100000</column>
+            <column name="descripcion">narra la historia de los hombres que desde el Renacimiento hicieron ciencia y de los turbulentos tiempos que les tocó vivir. Aquí aparecen no solo las figuras estelares como Copérnico, Darwin y Einstein, sino también las oscuras, las excéntricas, hasta las enloquecidas.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">El futuro de nuestra mente</column>
+            <column name="autor">Michio Kaku</column>
+            <column name="img">img/futuro_mente.jpg</column>
+            <column name="tema">ciencia</column>
+            <column name="precio">100000</column>
+            <column name="descripcion">El futuro de nuestra mente es el relato riguroso y fascinante de las investigaciones que se llevan a cabo en los laboratorios más importantes del mundo, todas basadas en los últimos avances en neurociencia y física.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Mujeres de ciencia</column>
+            <column name="autor">Rachel Ignotofsky</column>
+            <column name="img">img/mujeres_ciencia.jpg</column>
+            <column name="tema">ciencia</column>
+            <column name="precio">100000</column>
+            <column name="descripcion">Se trata de un libro ilustrado educativo, que pone de relieve las contribuciones de cincuenta mujeres notables a los campos de la ciencia, la tecnología, la ingeniería y las matemáticas (STEM) desde el antiguo hasta el mundo moderno.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Una historia del mundo</column>
+            <column name="autor">Andrew Marr</column>
+            <column name="img">img/historia_mundo.jpg</column>
+            <column name="tema">historia</column>
+            <column name="precio">20000</column>
+            <column name="descripcion">Una historia del mundo&quot; es un libro sobre los impulsores de los grandes cambios históricos, personajes como Cleopatra, Gengis Kan, Galileo o Mao, pero también sobre nosotros mismos.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Vikingos</column>
+            <column name="autor">Neil Price</column>
+            <column name="img">img/neil.jpg</column>
+            <column name="tema">historia</column>
+            <column name="precio">20000</column>
+            <column name="descripcion">Una comisión nazi, un arqueólogo con su prometida y el Vaticano, pretenden descubrir el &quot;Martillo de Thor&quot; o el &quot;Arma de Dios&quot;, una reliquia, fuente de un poder absoluto, que supuestamente Rollon, vikingo y primer duque de Normandía, llevaba colgada en su collar. Rollon estaba enterrado en la catedral de Ruán, pero al exhumarse, no estaba el cadáver. Según un manuscrito, que se disputan el arqueólogo y los nazis, Rollon fue enterrado en Escandinavia. Todos necesitan de ese poder.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">La celestina</column>
+            <column name="autor">Fernando de Rojas</column>
+            <column name="img">img/celestina.jpg</column>
+            <column name="tema">drama</column>
+            <column name="precio">30000</column>
+            <column name="descripcion">COMEDIA O TRAGICOMEDIA DE CALISTO Y MELIBEA. Calisto, joven de noble familia, persiguiendo un día un halcón, entra en el jardín de una doncella también noble, Melibea, y queda rendidamente enamorado de ella, pero es rechazado. ... Ésta consigue que la joven acceda a los requerimientos de Calisto.</column>
+        </table>
+        <table name="resultados">
+            <column name="nombre">Sapiens: De animales a dioses</column>
+            <column name="autor">Yuval Noah Harari</column>
+            <column name="img">img/sapien.jpg</column>
+            <column name="tema">ciencia</column>
+            <column name="precio">100000</column>
+            <column name="descripcion">En De animales a dioses, Yuval Noah Harari traza una breve historia de la humanidad, desde los primeros humanos que caminaron sobre la Tierra hasta los radicales y a veces devastadores avances de las tres grandes revoluciones que nuestra especie ha protagonizado: la cognitiva, la agrícola y la científica.</column>
+        </table>
+    </database>
+</pma_xml_export>
